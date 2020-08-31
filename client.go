@@ -1,18 +1,18 @@
 package main
 
 import (
-	"log"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
+	"log"
 
-	"github.com/dadakhon09/grpc-tutorial/tree/master/chat"
+	"github.com/dadakhon09/grpc-tutorial/chat"
 )
 
 func main() {
 	var conn *grpc.ClientConn
 
 	conn, err := grpc.Dial(":9000", grpc.WithInsecure())
-	if err !=nil {
+	if err != nil {
 		log.Fatalf("Could not connect: %s", err)
 	}
 	defer conn.Close()

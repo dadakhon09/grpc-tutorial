@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/dadakhon09/grpc-tutorial/tree/master/chat"
+	"github.com/dadakhon09/grpc-tutorial/chat"
 	"google.golang.org/grpc"
 	"log"
 	"net"
