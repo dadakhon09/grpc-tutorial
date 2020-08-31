@@ -2,12 +2,11 @@ package main
 
 import (
 	"fmt"
+	"github.com/dadakhon09/grpc-tutorial/tree/master/chat"
 	"google.golang.org/grpc"
-	"github.com/dadakhon09/grpc-tutorial/chat"
 	"log"
 	"net"
 )
-
 
 func main() {
 	fmt.Println("Working")
@@ -21,7 +20,7 @@ func main() {
 
 	grpcServer := grpc.NewServer()
 
-	chat.RegisterChatServiceServer(grpcServer,  &s)
+	chat.RegisterChatServiceServer(grpcServer, &s)
 
 	if err := grpcServer.Serve(lis); err != nil {
 		log.Fatalf("Failed to serve gRPC server on port 9000: %v", err)
